@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
