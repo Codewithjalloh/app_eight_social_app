@@ -33,10 +33,13 @@ class MyDrawer extends StatelessWidget {
                     Icons.home,
                     color: Theme.of(context).colorScheme.secondary,
                   ),
-                  title: Text("H O M E"),
+                  title: Text("P R O F I L E"),
                   onTap: () {
                     // this already the home screen so just pop drawer
                     Navigator.pop(context);
+
+                    // navigate to profile page
+                    Navigator.pushNamed(context, "/profile_page");
                   },
                 ),
               ),
