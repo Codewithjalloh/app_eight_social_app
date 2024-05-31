@@ -63,7 +63,25 @@ class MyDrawer extends StatelessWidget {
                 ),
               ),
             ],
-          )
+          ),
+          // profile tile
+          Padding(
+            padding: EdgeInsets.only(left: 25.0, bottom: 25.0),
+            child: ListTile(
+              leading: Icon(
+                Icons.home,
+                color: Theme.of(context).colorScheme.secondary,
+              ),
+              title: Text("L O G O U T"),
+              onTap: () {
+                // this already the home screen so just pop drawer
+                Navigator.pop(context);
+
+                // logout
+                logout();
+              },
+            ),
+          ),
         ],
       ),
     );
