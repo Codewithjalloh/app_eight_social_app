@@ -25,7 +25,7 @@ class MyDrawer extends StatelessWidget {
                 ),
               ),
 
-              // home tile
+              // profile tile
               Padding(
                 padding: EdgeInsets.only(left: 25.0),
                 child: ListTile(
@@ -40,6 +40,25 @@ class MyDrawer extends StatelessWidget {
 
                     // navigate to profile page
                     Navigator.pushNamed(context, "/profile_page");
+                  },
+                ),
+              ),
+
+              // profile tile
+              Padding(
+                padding: EdgeInsets.only(left: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.home,
+                    color: Theme.of(context).colorScheme.secondary,
+                  ),
+                  title: Text("U S E R"),
+                  onTap: () {
+                    // this already the home screen so just pop drawer
+                    Navigator.pop(context);
+
+                    // navigate to profile page
+                    Navigator.pushNamed(context, "/user_page");
                   },
                 ),
               ),
