@@ -1,11 +1,17 @@
+import 'package:app_eight_social_app/components%20/my_post_button.dart';
+import 'package:app_eight_social_app/components%20/my_textfield.dart';
+import 'package:app_eight_social_app/database/firestore.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
+import '../components /my_drawer.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
 
   // firestore access
-  final FirebaseFirestore database = FirebaseFirestore();
+  final FirestoreDatabase database = FirestoreDatabase();
 
   // text controler
   final TextEditingController newPostController = TextEditingController();
@@ -30,6 +36,26 @@ class HomePage extends StatelessWidget {
         title: Text("W A L L "),
       ),
       drawer: MyDrawer(),
+      body: Column(
+        children: [
+          // textield box for user to type
+          Padding(
+            padding: EdgeInsets.all(25.0),
+            child: Row(
+              children: [
+                Expanded(
+                  child: MyTextfield(
+                    hintText: "Say something",
+                    obscureText: false,
+                    controller: newPostController,
+                  ),
+                ),
+                PostButton(onTap: postMessage),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
