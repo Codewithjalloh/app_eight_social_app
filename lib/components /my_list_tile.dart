@@ -1,4 +1,4 @@
-import 'package:flutter/material.dar';
+import 'package:flutter/material.dart';
 
 class MyListTile extends StatelessWidget {
   final String title;
@@ -7,6 +7,23 @@ class MyListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Padding(
+      padding: EdgeInsets.only(left: 20.0, right: 20.0, bottom: 20.0),
+      child: Container(
+        decoration: BoxDecoration(
+          color: Theme.of(context).colorScheme.primary,
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: ListTile(
+          title: Text(title),
+          subtitle: Text(
+            subTitle,
+            style: TextStyle(
+              color: Theme.of(context).colorScheme.secondary,
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
