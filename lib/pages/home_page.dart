@@ -2,6 +2,7 @@ import 'package:app_eight_social_app/components%20/my_post_button.dart';
 import 'package:app_eight_social_app/components%20/my_textfield.dart';
 import 'package:app_eight_social_app/database/firestore.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -63,7 +64,20 @@ class HomePage extends StatelessWidget {
                     child: CircularProgressIndicator(),
                   );
                 }
-              });
+
+                // get all post
+                final posts = snapshot.data!.docs;
+
+                // no data
+                if (snapshot.data == null || posts.isEmpty) {
+                  return const Center(
+                    child: Padding(
+                      padding: EdgeInsets.all(25),
+                      child: Text("No Post... Post Something"),
+                    ),
+                  );
+                }
+              }),
         ],
       ),
     );
