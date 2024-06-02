@@ -54,6 +54,11 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
+          StreamBuilder(
+              stream: database.getPostStream(),
+              builder: (context, snapshot) {
+                //
+              })
         ],
       ),
     );
