@@ -57,8 +57,13 @@ class HomePage extends StatelessWidget {
           StreamBuilder(
               stream: database.getPostStream(),
               builder: (context, snapshot) {
-                //
-              })
+                // show loading circle
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return const Center(
+                    child: CircularProgressIndicator(),
+                  );
+                }
+              });
         ],
       ),
     );
