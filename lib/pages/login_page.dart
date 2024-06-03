@@ -14,6 +14,16 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
+  void login() async {
+    // show loading circle
+    showDialog(
+      context: context,
+      builder: (context) => const Center(
+        child: CircularProgressIndicator(),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
