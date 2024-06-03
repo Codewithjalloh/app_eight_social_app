@@ -80,20 +80,22 @@ class HomePage extends StatelessWidget {
               }
               // return as a list
               return Expanded(
-                  child: ListView.builder(
-                      itemCount: posts.length,
-                      itemBuilder: (context, index) {
-                        // get each individual post
-                        final post = posts[index];
+                child: ListView.builder(
+                  itemCount: posts.length,
+                  itemBuilder: (context, index) {
+                    // get each individual post
+                    final post = posts[index];
 
-                        // get data from each post
-                        String message = post["PostMessage"];
-                        String userEmail = post["UserEmail"];
-                        Timestamp timestamp = post["TimeStamp"];
+                    // get data from each post
+                    String message = post["PostMessage"];
+                    String userEmail = post["UserEmail"];
+                    Timestamp timestamp = post["TimeStamp"];
 
-                        // return as a list tile
-                        return MyListTile(title: message, subTitle: userEmail);
-                      }));
+                    // return as a list tile
+                    return MyListTile(title: message, subTitle: userEmail);
+                  },
+                ),
+              );
             },
           ),
         ],
