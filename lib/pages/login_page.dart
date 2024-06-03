@@ -57,6 +57,14 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(
                 height: 25,
               ),
+              // App Name
+              Text(
+                "Social Minimal",
+                style: TextStyle(fontSize: 20),
+              ),
+              SizedBox(
+                height: 50,
+              ),
             ],
           ),
         ),
