@@ -47,7 +47,17 @@ class _LoginPageState extends State<LoginPage> {
           padding: EdgeInsets.all(25),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [],
+            children: [
+              // Login
+              Icon(
+                Icons.person,
+                size: 89,
+                color: Theme.of(context).colorScheme.inversePrimary,
+              ),
+              SizedBox(
+                height: 25,
+              ),
+            ],
           ),
         ),
       ),
