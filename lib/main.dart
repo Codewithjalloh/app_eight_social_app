@@ -1,5 +1,10 @@
+import 'package:app_eight_social_app/auth/auth.dart';
+import 'package:app_eight_social_app/theme/dark_mode.dart';
+import 'package:app_eight_social_app/theme/light_mode.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+
+import 'pages/home_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
