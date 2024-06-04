@@ -97,6 +97,19 @@ class _LoginPageState extends State<LoginPage> {
                 height: 25,
               ),
               MyButton(text: "Login", onTap: login),
+              SizedBox(
+                height: 25,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Don't have an account",
+                    style: TextStyle(
+                        color: Theme.of(context).colorScheme.inverseSurface),
+                  ),
+                ],
+              )
             ],
           ),
         ),
