@@ -1,3 +1,4 @@
+import 'package:app_eight_social_app/components%20/my_button.dart';
 import 'package:app_eight_social_app/components%20/my_textfield.dart';
 import 'package:app_eight_social_app/helper/helper_funtion.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -91,7 +92,11 @@ class _LoginPageState extends State<LoginPage> {
                         color: Theme.of(context).colorScheme.secondary),
                   ),
                 ],
-              )
+              ),
+              SizedBox(
+                height: 25,
+              ),
+              MyButton(text: "Login", onTap: login),
             ],
           ),
         ),
