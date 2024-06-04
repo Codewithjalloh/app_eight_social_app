@@ -1,3 +1,4 @@
+import 'package:app_eight_social_app/components%20/my_textfield.dart';
 import 'package:app_eight_social_app/helper/helper_funtion.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -65,6 +66,32 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(
                 height: 50,
               ),
+              // Username and Password
+              MyTextfield(
+                  hintText: "Email",
+                  obscureText: false,
+                  controller: emailController),
+              SizedBox(
+                height: 10,
+              ),
+              MyTextfield(
+                  hintText: "Password",
+                  obscureText: true,
+                  controller: passwordController),
+              SizedBox(
+                height: 10,
+              ),
+              // Forgot Password
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    "Forgot Password",
+                    style: TextStyle(
+                        color: Theme.of(context).colorScheme.secondary),
+                  ),
+                ],
+              )
             ],
           ),
         ),
