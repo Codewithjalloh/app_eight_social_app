@@ -18,6 +18,32 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.surface,
+      body: FutureBuilder<DocumentSnapshot<Map<String, dynamic>>>(
+        future: getUserDetails(),
+        builder: (context, snapshot) {
+          // loading
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+          // error
+          else if (snapshot.hasError) {
+            return Text("Error: ${snapshot.error}");
+          }
+
+          // data recieved
+          else if (snapshot.hasData) {
+            // extract data
+            Map<String, dynamic>? user = snapshot.data!.data();
+            return Center(
+
+            )
+          }
+        },
+      ),
+    );
   }
 }
