@@ -42,26 +42,57 @@ class ProfilePage extends StatelessWidget {
             return Center(
               child: Column(
                 children: [
-                  Padding(padding: EdgeInsets.only(top: 50.0, left: 25.0), child: Row(
-                    children: [
-                      MyBackButton(),
-                    ],
-                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 50.0, left: 25.0),
+                    child: Row(
+                      children: [
+                        MyBackButton(),
+                      ],
+                    ),
                   ),
                   const SizedBox(
                     height: 25,
                   ),
 
-                //   Profile pic
+                  //   Profile pic
                   Container(
-                    decoration: BoxDecoration,
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).colorScheme.primary,
+                      borderRadius: BorderRadius.circular(24),
+                    ),
+                    padding: EdgeInsets.all(25),
+                    child: Icon(
+                      Icons.person,
+                      size: 64,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 25,
+                  ),
+                  // username
+                  Text(
+                    user!['username'],
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 25,
+                  ),
+
+                  // email
+                  Text(
+                    user["email"],
+                    style: TextStyle(
+                      color: Colors.grey[600],
+                    ),
                   )
-
-
                 ],
               ),
-
-            )
+            );
+          } else {
+            return const Text("No data");
           }
         },
       ),
