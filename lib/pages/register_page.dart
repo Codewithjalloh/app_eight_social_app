@@ -1,3 +1,4 @@
+import 'package:app_eight_social_app/helper/helper_funtion.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -20,10 +21,19 @@ class _RegisterPageState extends State<RegisterPage> {
     // show loading circle
     showDialog(
       context: context,
-      builder: (context) => Center(
+      builder: (context) => const Center(
         child: CircularProgressIndicator(),
       ),
     );
+
+    // make sure passwords match
+    if (passwordController.text != confirmPasswordController.text) {
+      // pop loading circle
+      Navigator.pop(context);
+
+      // show error message to user
+      displayMessageToUser("Password don't match", context);
+    }
   }
 
   @override
