@@ -1,4 +1,5 @@
 import 'package:app_eight_social_app/helper/helper_funtion.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -33,6 +34,27 @@ class _RegisterPageState extends State<RegisterPage> {
 
       // show error message to user
       displayMessageToUser("Password don't match", context);
+    }
+    // if password do match
+    else {
+      // try creating the user
+      try {
+        // create the user
+        UserCredential? userCredential = await FirebaseAuth.instance
+            .createUserWithEmailAndPassword(
+                email: emailController.text, password: passwordController.text);
+        // create a user document and add to firestore
+        createUserDocument(userCredential);
+
+        // pop loading circle
+        if (context.mounted) Navigator.pop(context);
+      } on FirebaseException catch (e) {
+        // pop loading circle
+        Navigator.pop(context);
+
+        // display error message to user
+        displayMessageToUser(e.code, context);
+      }
     }
   }
 
