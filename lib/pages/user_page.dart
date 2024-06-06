@@ -1,4 +1,5 @@
 import 'package:app_eight_social_app/components%20/my_back_button.dart';
+import 'package:app_eight_social_app/components%20/my_list_tile.dart';
 import 'package:app_eight_social_app/helper/helper_funtion.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -27,27 +28,32 @@ class UserPage extends StatelessWidget {
           return Column(
             children: [
               // back button
-              Padding(padding: EdgeInsets.only(
-                top: 50.0,
-                left: 25.0,
+              Padding(
+                padding: EdgeInsets.only(
+                  top: 50.0,
+                  left: 25.0,
+                ),
+                child: Row(
+                  children: [
+                    MyBackButton(),
+                  ],
+                ),
               ),
-              child: Row(
-                children: [
-                  MyBackButton(),
-                ],
-              ),
-              ),
-              Expanded(child: ListView.builder(
-                  itemCount: users.length,
-                  itemBuilder: (context, index) {
-                    // get individual user
-                    final user = users[index];
+              // list of users in the app
+              Expanded(
+                  child: ListView.builder(
+                      itemCount: users.length,
+                      itemBuilder: (context, index) {
+                        // get individual user
+                        final user = users[index];
 
+                        String username = user["username"];
+                        String email = user["email"];
 
-
-              }))
+                        return MyListTile(title: username, subTitle: email);
+                      }))
             ],
-          )
+          );
         },
       ),
     );
