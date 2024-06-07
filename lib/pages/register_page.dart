@@ -112,10 +112,27 @@ class _RegisterPageState extends State<RegisterPage> {
                 height: 10,
               ),
 
+              // email
               MyTextfield(
                   hintText: "Email",
                   obscureText: false,
-                  controller: usernameController),
+                  controller: emailController),
+              SizedBox(
+                height: 10,
+              ),
+              // password
+              MyTextfield(
+                  hintText: "Password",
+                  obscureText: true,
+                  controller: passwordController),
+              SizedBox(
+                height: 10,
+              ),
+
+              MyTextfield(
+                  hintText: "confirm password",
+                  obscureText: true,
+                  controller: confirmPasswordController),
               SizedBox(
                 height: 10,
               ),
