@@ -1,3 +1,4 @@
+import 'package:app_eight_social_app/components%20/my_textfield.dart';
 import 'package:app_eight_social_app/helper/helper_funtion.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -97,6 +98,18 @@ class _RegisterPageState extends State<RegisterPage> {
               const Text(
                 "Social Minimal",
                 style: TextStyle(fontSize: 20),
+              ),
+              SizedBox(
+                height: 50,
+              ),
+
+              // Username, Email, Password and confirm password textfield
+              MyTextfield(
+                  hintText: "Username",
+                  obscureText: false,
+                  controller: usernameController),
+              SizedBox(
+                height: 10,
               ),
             ],
           ),
