@@ -79,10 +79,26 @@ class _RegisterPageState extends State<RegisterPage> {
       backgroundColor: Theme.of(context).colorScheme.surface,
       body: Center(
         child: Padding(
-          padding: EdgeInsets.all(25),
+          padding: const EdgeInsets.all(25),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [],
+            children: [
+              // Logo
+              Icon(
+                Icons.person,
+                size: 89,
+                color: Theme.of(context).colorScheme.inversePrimary,
+              ),
+              const SizedBox(
+                height: 25,
+              ),
+
+              // App Name
+              const Text(
+                "Social Minimal",
+                style: TextStyle(fontSize: 20),
+              ),
+            ],
           ),
         ),
       ),
