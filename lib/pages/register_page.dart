@@ -144,7 +144,10 @@ class _RegisterPageState extends State<RegisterPage> {
                     "Forgot Password",
                     style: TextStyle(
                         color: Theme.of(context).colorScheme.secondary),
-                  )
+                  ),
+                  const SizedBox(
+                    height: 25,
+                  ),
                 ],
               )
             ],
