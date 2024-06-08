@@ -153,6 +153,17 @@ class _RegisterPageState extends State<RegisterPage> {
                   const SizedBox(
                     height: 25,
                   ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Already have an account",
+                        style: TextStyle(
+                            color:
+                                Theme.of(context).colorScheme.inverseSurface),
+                      ),
+                    ],
+                  )
                 ],
               )
             ],
