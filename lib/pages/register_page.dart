@@ -162,6 +162,13 @@ class _RegisterPageState extends State<RegisterPage> {
                             color:
                                 Theme.of(context).colorScheme.inverseSurface),
                       ),
+                      GestureDetector(
+                        onTap: widget.onTap,
+                        child: const Text(
+                          "Login Here",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ),
                     ],
                   )
                 ],
