@@ -136,6 +136,17 @@ class _RegisterPageState extends State<RegisterPage> {
               SizedBox(
                 height: 10,
               ),
+              // Forgot password
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    "Forgot Password",
+                    style: TextStyle(
+                        color: Theme.of(context).colorScheme.secondary),
+                  )
+                ],
+              )
             ],
           ),
         ),
