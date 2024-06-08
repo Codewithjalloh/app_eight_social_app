@@ -1,3 +1,4 @@
+import 'package:app_eight_social_app/components%20/my_button.dart';
 import 'package:app_eight_social_app/components%20/my_textfield.dart';
 import 'package:app_eight_social_app/helper/helper_funtion.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -145,6 +146,10 @@ class _RegisterPageState extends State<RegisterPage> {
                     style: TextStyle(
                         color: Theme.of(context).colorScheme.secondary),
                   ),
+                  const SizedBox(
+                    height: 25,
+                  ),
+                  MyButton(text: "Register", onTap: register),
                   const SizedBox(
                     height: 25,
                   ),
