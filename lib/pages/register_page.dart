@@ -84,7 +84,7 @@ class _RegisterPageState extends State<RegisterPage> {
           padding: const EdgeInsets.all(25),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: <Widget>[
               // Logo
               Icon(
                 Icons.person,
@@ -100,7 +100,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 "Social Minimal",
                 style: TextStyle(fontSize: 20),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
 
@@ -170,7 +170,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         ),
                       ),
                     ],
-                  )
+                  ),
                 ],
               )
             ],
