@@ -1,15 +1,19 @@
 import 'package:app_eight_social_app/auth/auth.dart';
+import 'package:app_eight_social_app/firebase_options.dart';
+import 'package:app_eight_social_app/pages/profile_page.dart';
+import 'package:app_eight_social_app/pages/user_page.dart';
 import 'package:app_eight_social_app/theme/dark_mode.dart';
 import 'package:app_eight_social_app/theme/light_mode.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
+import 'auth/LoginOrRegister.dart';
 import 'pages/home_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  await runApp(const MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

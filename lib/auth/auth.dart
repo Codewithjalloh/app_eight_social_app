@@ -1,3 +1,4 @@
+import 'package:app_eight_social_app/auth/LoginOrRegister.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
