@@ -3,12 +3,17 @@ import 'package:flutter/material.dart';
 class MyListTile extends StatelessWidget {
   final String title;
   final String subTitle;
-  MyListTile({super.key, required this.title, required this.subTitle});
+
+  MyListTile({
+    super.key,
+    required this.title,
+    required this.subTitle,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 20.0, right: 20.0, bottom: 20.0),
+      padding: const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 20.0),
       child: Container(
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.primary,
