@@ -11,7 +11,7 @@ class MyBackButton extends StatelessWidget {
         decoration: BoxDecoration(
             color: Theme.of(context).colorScheme.primary,
             shape: BoxShape.circle),
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: Icon(
           Icons.arrow_back,
           color: Theme.of(context).colorScheme.secondary,
