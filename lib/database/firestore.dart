@@ -1,5 +1,15 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+/*
+This database stores posts that users have published in the app
+It is stored in a collection called 'Posts' in Firebase
+
+Each post contain
+- a message
+- email of user
+- timestap
+
+* */
 
 class FirestoreDatabase {
   // current logged in user
