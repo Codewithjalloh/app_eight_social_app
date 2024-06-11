@@ -4,7 +4,7 @@ class MyListTile extends StatelessWidget {
   final String title;
   final String subTitle;
 
-  MyListTile({
+  const MyListTile({
     super.key,
     required this.title,
     required this.subTitle,

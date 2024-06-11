@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class PostButton extends StatelessWidget {
   final void Function()? onTap;
 
-  PostButton({super.key, required this.onTap});
+  const PostButton({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
