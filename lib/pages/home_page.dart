@@ -5,7 +5,6 @@ import 'package:app_eight_social_app/database/firestore.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 
 import '../components /my_drawer.dart';
 
