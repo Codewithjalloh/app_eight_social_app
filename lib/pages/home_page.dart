@@ -24,6 +24,9 @@ class HomePage extends StatelessWidget {
       String message = newPostController.text;
       database.addPost(message);
     }
+
+    // clear the controller
+    newPostController.clear();
   }
 
   @override
