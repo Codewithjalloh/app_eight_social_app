@@ -80,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
                   hintText: "Password",
                   obscureText: true,
                   controller: passwordController),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               // Forgot Password
@@ -94,11 +94,11 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               MyButton(text: "Login", onTap: login),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               Row(
