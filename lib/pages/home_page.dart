@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.transparent,
         foregroundColor: Theme.of(context).colorScheme.secondary,
-        title: Text("W A L L "),
+        title: const Text("W A L L "),
       ),
       drawer: MyDrawer(),
       body: Column(
