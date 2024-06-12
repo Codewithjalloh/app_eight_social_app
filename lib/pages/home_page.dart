@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
         children: [
           // textield box for user to type
           Padding(
-            padding: EdgeInsets.all(25.0),
+            padding: const EdgeInsets.all(25.0),
             child: Row(
               children: [
                 Expanded(
