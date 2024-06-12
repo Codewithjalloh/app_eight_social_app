@@ -65,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
                 "Social Minimal",
                 style: TextStyle(fontSize: 20),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               // Username and Password
