@@ -27,6 +27,7 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
 
+    // try sign in
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: emailController.text,
@@ -46,7 +47,7 @@ class _LoginPageState extends State<LoginPage> {
       backgroundColor: Theme.of(context).colorScheme.surface,
       body: Center(
         child: Padding(
-          padding: EdgeInsets.all(25),
+          padding: const EdgeInsets.all(25),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -56,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
                 size: 89,
                 color: Theme.of(context).colorScheme.inversePrimary,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               // App Name
