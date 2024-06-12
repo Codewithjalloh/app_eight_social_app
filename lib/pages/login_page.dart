@@ -61,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
                 height: 25,
               ),
               // App Name
-              Text(
+              const Text(
                 "Social Minimal",
                 style: TextStyle(fontSize: 20),
               ),
